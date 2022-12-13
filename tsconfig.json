@@ -3,7 +3,7 @@
     "target": "ESNext",
     "baseUrl": ".",
     "paths": {
-      "@/*": [".src/*"]
+      "@/*": ["src/*"]
     },
     "useDefineForClassFields": true,
     "module": "ESNext",
