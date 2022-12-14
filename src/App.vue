@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, watch } from 'vue'
+import { reactive } from 'vue'
 import LayoutPublic from "@/components/layout/LayoutPublic.vue";
 import AddTask from '@/components/AddTask.vue'
 import TaskList from '@/components/TaskList.vue'

@@ -10,8 +10,6 @@ const taskIndex = ref<number>(0)
 
 const getItemIndex = (data: number) => taskIndex.value = data
 
-
-
 const handleTaskCheck = (): void => emits('updateTaskData', taskIndex.value)
 const handleTaskDelete = (itemType: string): void =>
   emits("updateDeleteData", {
