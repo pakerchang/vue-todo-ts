@@ -4,6 +4,11 @@ import LayoutPublic from "@/components/layout/LayoutPublic.vue";
 import AddTask from '@/components/AddTask.vue'
 import TaskList from '@/components/TaskList.vue'
 
+interface DeleteData {
+  index: number;
+  type: string
+}
+
 const tasks = reactive<{ taskData: string[], checkData: string[] }>({
   taskData: [],
   checkData: [],
@@ -15,7 +20,8 @@ const updateTaskData = (index: number) => {
   tasks.checkData = [...tasks.checkData, tasks.taskData[index]]
   tasks.taskData.splice(index, 1)
 }
-const updateCheckData = (index: number) => tasks.checkData.splice(index, 1)
+const updateCheckData = (data: DeleteData) =>
+  data.type === 'task' ? tasks.taskData.splice(data.index, 1) : tasks.checkData.splice(data.index, 1)
 </script>
 
 <template>
