@@ -4,7 +4,12 @@ import LayoutList from "@/components/layout/LayoutList.vue";
 import List from "@/components/shared/List.vue"
 import { CheckIcon, TrashIcon } from '@heroicons/vue/24/outline'
 
-const props = defineProps<{ data: any }>()
+interface DataType {
+  taskData: string[];
+  checkData: string[];
+}
+
+const props = defineProps<{ data: DataType }>()
 const emits = defineEmits(['updateDeleteData', 'updateTaskData'])
 const taskIndex = ref<number>(0)
 

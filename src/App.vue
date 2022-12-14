@@ -14,10 +14,10 @@ const tasks = reactive<{ taskData: string[], checkData: string[] }>({
   checkData: [],
 })
 
-const getUpData = (data: string) => tasks.taskData = [...tasks.taskData, data]
+const getUpData = (data: string) => tasks.taskData.push(data)
 
 const updateTaskData = (index: number) => {
-  tasks.checkData = [...tasks.checkData, tasks.taskData[index]]
+  tasks.checkData.push(tasks.taskData[index])
   tasks.taskData.splice(index, 1)
 }
 const updateCheckData = (data: DeleteData) =>
